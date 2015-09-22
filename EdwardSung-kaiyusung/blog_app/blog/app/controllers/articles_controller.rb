@@ -36,7 +36,7 @@ class ArticlesController < ApplicationController
   def update
   @article = get_article
   if @article.update(article_params)
-    redirect_to @article
+    redirect_to articles_path
   else
     render 'edit'
   end
